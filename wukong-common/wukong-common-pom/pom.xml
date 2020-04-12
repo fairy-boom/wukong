@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-cloud-dependencies-parent</artifactId>
+        <groupId>org.springframework.cloud</groupId>
+        <version>2.2.3.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.okboom</groupId>
+    <artifactId>wukong-common-pom</artifactId>
+    <packaging>pom</packaging>
+    <version>${wukong.version}</version>
+    <description>公共版本控制</description>
+
+    <properties>
+        <wukong.version>0.0.1-SNAPSHOT</wukong.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.okboom</groupId>
+                <artifactId>wukong-boot-starter</artifactId>
+                <version>${wukong.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
