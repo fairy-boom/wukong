@@ -35,41 +35,41 @@ public class CmppQueryRespMessage extends Message {
     /**
      * 从SP 接收信息总数
      */
-    private Integer mtTlMsg;
+    private Long mtTlMsg;
 
     /**
      * 从SP 接收用户总数
      */
-    private Integer mtTlUsr;
+    private Long mtTlUsr;
 
     /**
      * 成功转发数
      */
-    private Integer mtScs;
+    private Long mtScs;
 
     /**
      * 待转发数
      */
-    private Integer mtWt;
+    private Long mtWt;
 
     /**
      * 转发失败数
      */
-    private Integer mtFl;
+    private Long mtFl;
 
     /**
      * 向sp成功送达数
      */
-    private Integer moScs;
+    private Long moScs;
 
     /**
      * 向sp待送达数
      */
-    private Integer moWt;
+    private Long moWt;
 
     /**
      * 向sp送达失败数
      */
-    private Integer moFl;
+    private Long moFl;
 
 }

@@ -1,9 +1,7 @@
 package org.okboom.wukong.sms.exchange.protocol.cmpp;
 
 import io.netty.handler.codec.MessageToMessageCodec;
-import org.okboom.wukong.sms.exchange.codec.cmpp.ActiveTestCodec;
-import org.okboom.wukong.sms.exchange.codec.cmpp.ConnectCodec;
-import org.okboom.wukong.sms.exchange.codec.cmpp.TerminateCodec;
+import org.okboom.wukong.sms.exchange.codec.cmpp.*;
 import org.okboom.wukong.sms.exchange.protocol.Command;
 
 /**
@@ -29,13 +27,29 @@ public enum CmppCommand implements Command {
      */
     TERMINATE_RESP(0x80000002, 0, TerminateCodec.class),
     /**
-     * 终止连接
+     * 提交短信
      */
-    QUERY(0x00000006, 27, TerminateCodec.class),
+    SUBMIT(0x00000004, 0, TerminateCodec.class),
     /**
-     * 终止连接应答
+     * 提交短信应答
      */
-    QUERY_RESP(0x80000006, 51, TerminateCodec.class),
+    SUBMIT_RESP(0x80000004, 0, TerminateCodec.class),
+    /**
+     * 发送短信状态查询
+     */
+    QUERY(0x00000006, 27, QueryCodec.class),
+    /**
+     * 发送短信状态查询应答
+     */
+    QUERY_RESP(0x80000006, 51, QueryCodec.class),
+    /**
+     * 删除短信
+     */
+    CANCEL(0x00000007, 8, CancelCodec.class),
+    /**
+     * 删除短信 应答
+     */
+    CANCEL_RESP(0x80000007, 4, CancelCodec.class),
     /**
      * 激活测试
      */
