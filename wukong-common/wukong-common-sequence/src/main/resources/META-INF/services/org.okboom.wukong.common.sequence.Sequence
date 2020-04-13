@@ -1,0 +1,2 @@
+org.okboom.wukong.common.sequence.sequence.DefaultSequence
+org.okboom.wukong.common.sequence.sequence.SnowflakeSequence

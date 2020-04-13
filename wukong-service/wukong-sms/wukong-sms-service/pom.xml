@@ -23,5 +23,14 @@
             <groupId>org.okboom</groupId>
             <artifactId>wukong-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.okboom</groupId>
+            <artifactId>wukong-sms-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rocketmq</artifactId>
+        </dependency>
     </dependencies>
 </project>

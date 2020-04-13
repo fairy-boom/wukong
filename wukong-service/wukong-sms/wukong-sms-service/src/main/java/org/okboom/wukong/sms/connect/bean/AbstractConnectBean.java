@@ -2,6 +2,7 @@ package org.okboom.wukong.sms.connect.bean;
 
 import lombok.Data;
 import lombok.ToString;
+import org.okboom.wukong.common.sequence.Sequence;
 import org.okboom.wukong.sms.connect.AbstractClient;
 
 import java.io.Serializable;
@@ -43,7 +44,14 @@ public abstract class AbstractConnectBean implements Serializable {
     /**
      * 限流
      */
-    private Integer limit;
+    private Integer writeLimit;
+
+    private Integer readLimit;
+
+    /**
+     * 最大连接数
+     */
+    private Integer maxConnect;
 
     /**
      * 备注
@@ -64,6 +72,7 @@ public abstract class AbstractConnectBean implements Serializable {
      * 重试次数
      */
     private Integer retryConnect;
+
 
     public Integer getConnectTimeout() {
         if(connectTimeout == null) {

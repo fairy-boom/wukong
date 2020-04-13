@@ -31,4 +31,11 @@ public interface Client<T extends AbstractConnectBean> {
      * @param channel
      */
     void doClose(Channel channel);
+
+    /**
+     * 添加通道
+     * @param channel
+     * @return
+     */
+    boolean addChannel(Channel channel);
 }

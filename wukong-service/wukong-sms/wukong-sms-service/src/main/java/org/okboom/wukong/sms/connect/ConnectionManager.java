@@ -1,5 +1,6 @@
 package org.okboom.wukong.sms.connect;
 
+import org.okboom.wukong.common.sequence.Sequence;
 import org.okboom.wukong.sms.connect.bean.AbstractConnectBean;
 
 import java.util.HashSet;
@@ -8,14 +9,16 @@ import java.util.Set;
 /**
  * @author tookbra
  */
-public enum ConnectionManager {
+public final class ConnectionManager {
 
-    /**
-     *
-     */
-    INSTANCE;
 
     public final Set<AbstractConnectBean> channels = new HashSet<>();
+
+    private final Sequence sequence;
+
+    public ConnectionManager(Sequence sequence) {
+        this.sequence = sequence;
+    }
 
     /**
      *

@@ -15,5 +15,7 @@
     <modules>
         <module>wukong-common-pom</module>
         <module>wukong-boot-starter</module>
+        <module>wukong-common-tool</module>
+        <module>wukong-common-sequence</module>
     </modules>
 </project>

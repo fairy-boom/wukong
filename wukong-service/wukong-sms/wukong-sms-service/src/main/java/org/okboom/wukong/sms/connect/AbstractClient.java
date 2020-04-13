@@ -9,6 +9,7 @@ import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.concurrent.DefaultThreadFactory;
 import io.netty.util.internal.SocketUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.okboom.wukong.common.sequence.Sequence;
 import org.okboom.wukong.sms.common.Constants;
 import org.okboom.wukong.sms.connect.bean.AbstractConnectBean;
 

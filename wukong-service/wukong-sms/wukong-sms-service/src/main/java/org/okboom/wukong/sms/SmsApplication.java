@@ -1,15 +1,10 @@
 package org.okboom.wukong.sms;
 
-import io.netty.bootstrap.Bootstrap;
-import io.netty.buffer.PooledByteBufAllocator;
-import io.netty.channel.*;
-import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.nio.NioSocketChannel;
-import org.okboom.wukong.sms.connect.ConnectionManager;
-import org.okboom.wukong.sms.connect.bean.AbstractConnectBean;
+import org.okboom.wukong.sms.api.stream.MtStreams;
 import org.okboom.wukong.sms.connect.bean.CmppConnectBean;
 import org.okboom.wukong.sms.domain.ChannelInfo;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.cloud.stream.annotation.StreamListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,26 +23,12 @@ public class SmsApplication implements CommandLineRunner {
 
         channelInfos.forEach(t -> {
             CmppConnectBean connectBean = new CmppConnectBean();
-
-            ConnectionManager.INSTANCE.addConnect(connectBean);
         });
 
-        Bootstrap bootstrap = new Bootstrap();
-        bootstrap.group(new NioEventLoopGroup(0)).channel(NioSocketChannel.class)
-                .option(ChannelOption.TCP_NODELAY, true)
-                .option(ChannelOption.SO_RCVBUF, 2048)
-                .option(ChannelOption.SO_SNDBUF, 2048)
-                .option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
-                .option(ChannelOption.RCVBUF_ALLOCATOR,new FixedRecvByteBufAllocator(1024))
-                .handler(initPipeLine());
     }
 
-    private ChannelHandler initPipeLine() {
-        return new ChannelInitializer<Channel>() {
-            @Override
-            protected void initChannel(Channel channel) throws Exception {
+    @StreamListener(MtStreams.INPUT_CMPP)
+    public void handleMessage() {
 
-            }
-        };
     }
 }
