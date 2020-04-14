@@ -11,6 +11,9 @@
 
     <artifactId>wukong-ops</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>wukong-mointor-admin</module>
+    </modules>
 
 
 </project>
