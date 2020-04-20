@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        serverAddr: 'http://localhost:8848'
+        file-extension: yml
+        timeout: 10000
+        sharedConfigs:
+          dataId: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+          refresh: true
+      discovery:
+        serverAddr: 'http://localhost:8848'
+        timeout: 10000
+
+#开启端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

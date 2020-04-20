@@ -11,9 +11,10 @@
 
     <artifactId>wukong-ops</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>wukong-mointor-admin</module>
-    </modules>
 
+    <modules>
+        <module>wukong-monitor-admin</module>
+        <module>wukong-sentinel-admin</module>
+    </modules>
 
 </project>
