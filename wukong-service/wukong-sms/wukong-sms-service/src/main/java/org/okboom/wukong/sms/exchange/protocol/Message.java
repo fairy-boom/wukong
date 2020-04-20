@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @NoArgsConstructor
-public abstract class Message extends Packet {
+public class Message extends Packet {
 
     private static final long serialVersionUID = -8846575751635608419L;
 
