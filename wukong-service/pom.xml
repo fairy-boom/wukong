@@ -17,6 +17,7 @@
         <module>wukong-pay</module>
         <module>wukong-oss</module>
         <module>wukong-order</module>
+        <module>wukong-user</module>
     </modules>
 
     <dependencyManagement>
@@ -24,6 +25,11 @@
             <dependency>
                 <groupId>org.okboom</groupId>
                 <artifactId>wukong-sms-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.okboom</groupId>
+                <artifactId>wukong-user-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

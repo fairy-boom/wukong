@@ -9,11 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>wukong-oss</artifactId>
+    <artifactId>wukong-user</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>wukong-oss-api</module>
-        <module>wukong-oss-service</module>
+        <module>wukong-user-api</module>
+        <module>wukong-user-service</module>
     </modules>
+
 </project>

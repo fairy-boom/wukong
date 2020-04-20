@@ -10,7 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>wukong-order</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
+    <modules>
+        <module>wukong-order-api</module>
+        <module>wukong-order-service</module>
+    </modules>
 
 </project>
