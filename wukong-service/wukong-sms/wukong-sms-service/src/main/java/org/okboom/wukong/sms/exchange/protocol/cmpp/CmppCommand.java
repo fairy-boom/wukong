@@ -35,6 +35,14 @@ public enum CmppCommand implements Command {
      */
     SUBMIT_RESP(0x80000004, 0, TerminateCodec.class),
     /**
+     * 短信下发
+     */
+    DELIVER(0x00000005, 0, TerminateCodec.class),
+    /**
+     * 下发短信应答
+     */
+    DELIVER_RESP(0x80000005, 0, TerminateCodec.class),
+    /**
      * 发送短信状态查询
      */
     QUERY(0x00000006, 27, QueryCodec.class),
