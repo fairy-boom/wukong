@@ -19,6 +19,6 @@
         <module>wukong-common-sequence</module>
         <module>wukong-mybatis-starter</module>
         <module>wukong-cloud-starter</module>
-        <module>wukong-swagger-starter</module>
+        <module>wukong-redis-starter</module>
     </modules>
 </project>

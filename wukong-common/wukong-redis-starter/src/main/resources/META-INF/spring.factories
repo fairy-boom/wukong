@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.okboom.wukong.redis.configure.SerializerConfiguration,\
+org.okboom.wukong.redis.configure.RedisTemplateConfigure,\
+org.okboom.wukong.redis.configure.RedisConfigure
