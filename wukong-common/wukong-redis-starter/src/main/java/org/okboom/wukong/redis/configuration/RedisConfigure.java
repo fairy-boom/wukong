@@ -1,4 +1,4 @@
-package org.okboom.wukong.redis.configure;
+package org.okboom.wukong.redis.configuration;
 
 
 /**

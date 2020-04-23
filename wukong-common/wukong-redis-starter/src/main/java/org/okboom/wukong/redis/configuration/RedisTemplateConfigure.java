@@ -1,4 +1,4 @@
-package org.okboom.wukong.redis.configure;
+package org.okboom.wukong.redis.configuration;
 
 import org.okboom.wukong.redis.serializer.RedisKeySerializer;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
