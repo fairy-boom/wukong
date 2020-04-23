@@ -1,0 +1,27 @@
+server:
+  port: 2000
+
+spring:
+  application:
+    name: @artifactId@
+  cloud:
+    nacos:
+      config:
+        serverAddr: 'http://localhost:8848'
+        file-extension: yml
+        timeout: 10000
+        sharedConfigs:
+          dataId: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+          refresh: true
+        namespace: dcd629ab-ddba-4632-95c4-e9a0d9fa7f33
+        group: DEV_GROUP
+        prefix: @artifactId@
+        metadata:
+          dynamicRouteName: dynamicRoute
+      discovery:
+        serverAddr: 'http://localhost:8848'
+        timeout: 10000
+        namespace: dcd629ab-ddba-4632-95c4-e9a0d9fa7f33
+        group: DEV_GROUP
+  profiles:
+    active: dev
