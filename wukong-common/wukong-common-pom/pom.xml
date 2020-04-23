@@ -56,12 +56,17 @@
             </dependency>
             <dependency>
                 <groupId>org.okboom</groupId>
-                <artifactId>wukong-swagger-starter</artifactId>
+                <artifactId>wukong-cloud-starter</artifactId>
                 <version>${wukong.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.okboom</groupId>
-                <artifactId>wukong-cloud-starter</artifactId>
+                <artifactId>wukong-redis-starter</artifactId>
+                <version>${wukong.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.okboom</groupId>
+                <artifactId>wukong-mybatis-starter</artifactId>
                 <version>${wukong.version}</version>
             </dependency>
 
