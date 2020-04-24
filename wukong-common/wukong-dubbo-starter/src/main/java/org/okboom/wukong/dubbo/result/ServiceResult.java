@@ -90,6 +90,14 @@ public final class ServiceResult<T> implements Serializable {
 
     /**
      * 成功
+     * @param <T>
+     * @return
+     */
+    public static <T> ServiceResult<T> success() {
+        return new ServiceResult(SystemCode.SUCCESS, SystemCode.SUCCESS.message);
+    }
+    /**
+     * 成功
      * @param msg
      * @param <T>
      * @return
