@@ -20,5 +20,6 @@
         <module>wukong-mybatis-starter</module>
         <module>wukong-cloud-starter</module>
         <module>wukong-redis-starter</module>
+        <module>wukong-dubbo-starter</module>
     </modules>
 </project>

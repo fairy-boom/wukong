@@ -71,6 +71,11 @@
                 <artifactId>wukong-mybatis-starter</artifactId>
                 <version>${wukong.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.okboom</groupId>
+                <artifactId>wukong-dubbo-starter</artifactId>
+                <version>${wukong.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>cn.hutool</groupId>
