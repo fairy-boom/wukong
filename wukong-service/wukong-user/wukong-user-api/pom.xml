@@ -11,5 +11,14 @@
 
     <artifactId>wukong-user-api</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.okboom</groupId>
+            <artifactId>wukong-common-tool</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.okboom</groupId>
+            <artifactId>wukong-dubbo-starter</artifactId>
+        </dependency>
+    </dependencies>
 </project>
