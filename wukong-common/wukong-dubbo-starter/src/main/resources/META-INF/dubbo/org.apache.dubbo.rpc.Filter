@@ -1,0 +1,2 @@
+validationFilter=org.okboom.wukong.dubbo.filter.ValidationFilter
+exceptionFilter=org.okboom.wukong.dubbo.filter.ExceptionFilter

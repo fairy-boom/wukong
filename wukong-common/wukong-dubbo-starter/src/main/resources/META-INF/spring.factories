@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.okboom.wukong.dubbo.configuration.DubboConfiguration

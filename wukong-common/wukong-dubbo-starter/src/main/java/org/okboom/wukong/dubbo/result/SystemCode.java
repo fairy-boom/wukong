@@ -1,6 +1,7 @@
 package org.okboom.wukong.dubbo.result;
 
 /**
+ * 系统错误枚举
  * @author tookbra
  */
 public enum SystemCode implements ServiceCode {

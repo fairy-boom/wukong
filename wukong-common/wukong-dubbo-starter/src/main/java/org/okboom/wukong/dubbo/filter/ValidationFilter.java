@@ -12,7 +12,7 @@ import javax.validation.Validator;
  * @author tookbra
  */
 @Slf4j
-@Activate(order = -1)
+@Activate(value = "validationFilter", order = -1)
 public class ValidationFilter implements Filter {
 
     private static Validator validator = Validation.buildDefaultValidatorFactory().getValidator();

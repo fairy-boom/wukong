@@ -1,6 +1,7 @@
 package org.okboom.wukong.dubbo.filter;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.common.extension.Activate;
 import org.apache.dubbo.rpc.*;
 
 /**
@@ -8,6 +9,7 @@ import org.apache.dubbo.rpc.*;
  * @author tookbra
  */
 @Slf4j
+@Activate(value = "exceptionFilter")
 public class ExceptionFilter implements Filter {
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
