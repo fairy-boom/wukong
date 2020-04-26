@@ -1,6 +1,7 @@
 package org.okboom.wukong.gateway.route;
 
 import lombok.extern.slf4j.Slf4j;
+import org.okboom.wukong.dubbo.proxy.ReferenceCache;
 import org.springframework.cloud.gateway.event.RefreshRoutesEvent;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinitionWriter;
@@ -18,11 +19,13 @@ import java.util.List;
 public class GatewayRouteService implements ApplicationEventPublisherAware {
 
     private final RouteDefinitionWriter routeDefinitionWriter;
+    private final ReferenceCache referenceCache;
 
     private ApplicationEventPublisher applicationEventPublisher;
 
-    public GatewayRouteService(RouteDefinitionWriter routeDefinitionWriter) {
+    public GatewayRouteService(RouteDefinitionWriter routeDefinitionWriter, ReferenceCache referenceCache) {
         this.routeDefinitionWriter = routeDefinitionWriter;
+        this.referenceCache = referenceCache;
     }
 
     @Override
@@ -42,7 +45,6 @@ public class GatewayRouteService implements ApplicationEventPublisherAware {
            log.error("gateway route update error: {}", e.getMessage());
         }
     }
-
 
     /**
      * 更新路由

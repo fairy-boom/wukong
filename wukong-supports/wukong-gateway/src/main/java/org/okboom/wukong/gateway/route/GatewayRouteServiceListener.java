@@ -1,5 +1,6 @@
 package org.okboom.wukong.gateway.route;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.alibaba.cloud.nacos.NacosConfigManager;
 import com.alibaba.cloud.nacos.NacosConfigProperties;
 import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
@@ -7,10 +8,13 @@ import com.alibaba.nacos.api.config.ConfigService;
 import com.alibaba.nacos.api.config.listener.Listener;
 import lombok.extern.slf4j.Slf4j;
 import org.okboom.wukong.common.tool.util.JSONUtil;
+import org.okboom.wukong.dubbo.domain.Metadata;
+import org.okboom.wukong.dubbo.proxy.ReferenceCache;
 import org.okboom.wukong.gateway.constant.NacosConstant;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.core.env.ConfigurableEnvironment;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executor;
 
@@ -26,6 +30,7 @@ public class GatewayRouteServiceListener {
     private final GatewayRouteService gatewayRouteService;
     private final ConfigurableEnvironment environment;
     private final NacosConfigManager nacosConfigManager;
+    private final ReferenceCache referenceCache;
     /**
      * 动态路由配置名称
      */
@@ -36,13 +41,15 @@ public class GatewayRouteServiceListener {
                                        GatewayRouteService gatewayRouteService,
                                        ConfigurableEnvironment environment,
                                        NacosConfigManager nacosConfigManager,
-                                       String dynamicRouteConfigName) {
+                                       String dynamicRouteConfigName,
+                                       ReferenceCache referenceCache) {
         this.nacosDiscoveryProperties = nacosDiscoveryProperties;
         this.nacosConfigProperties = nacosConfigProperties;
         this.gatewayRouteService = gatewayRouteService;
         this.environment = environment;
         this.nacosConfigManager = nacosConfigManager;
         this.dynamicRouteConfigName = dynamicRouteConfigName;
+        this.referenceCache = referenceCache;
         this.dynamicRouteServiceListener();
     }
 
@@ -75,8 +82,20 @@ public class GatewayRouteServiceListener {
         }
     }
 
+    /**
+     * 刷新路由
+     * @param configInfo
+     */
     private void refreshRoute(String configInfo) {
         List<RouteDefinition> routeDefinitions = JSONUtil.parseList(configInfo, RouteDefinition.class);
         gatewayRouteService.updateList(routeDefinitions);
+
+        List<Metadata> metadata = new ArrayList<>();
+        routeDefinitions.forEach(t -> {
+            Metadata data = new Metadata();
+            BeanUtil.fillBeanWithMap(t.getMetadata(), data, false);
+            metadata.add(data);
+        });
+        referenceCache.refresh(metadata);
     }
 }
