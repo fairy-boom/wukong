@@ -21,5 +21,6 @@
         <module>wukong-cloud-starter</module>
         <module>wukong-redis-starter</module>
         <module>wukong-dubbo-starter</module>
+        <module>wukong-dubbo-client-starter</module>
     </modules>
 </project>

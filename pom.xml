@@ -25,6 +25,7 @@
         <module>wukong-portal</module>
         <module>wukong-supports</module>
         <module>wukong-common</module>
+        <module>wukong-ops/wukong-dubbo-admin</module>
     </modules>
 
     <description>a distributed sms project</description>

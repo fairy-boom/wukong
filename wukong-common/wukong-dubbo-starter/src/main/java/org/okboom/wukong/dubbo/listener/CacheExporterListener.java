@@ -5,7 +5,7 @@ import org.apache.dubbo.common.extension.Activate;
 import org.apache.dubbo.rpc.Exporter;
 import org.apache.dubbo.rpc.RpcException;
 import org.apache.dubbo.rpc.listener.ExporterListenerAdapter;
-import org.okboom.wukong.dubbo.proxy.ReferenceCache;
+import org.okboom.wukong.dubbo.cache.ReferenceCache;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**

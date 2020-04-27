@@ -48,7 +48,12 @@ mybatis-plus:
 
 dubbo:
   register:
+    address: spring-cloud://localhost
+  metadata-report:
     address: nacos://localhost:8848
+    username: nacos
+    password: nacos
+#    namespace: dcd629ab-ddba-4632-95c4-e9a0d9fa7f33
   protocol:
     port: -1
     name: dubbo
@@ -57,3 +62,5 @@ dubbo:
       version: 1.0.0
   scan:
     base-packages: org.okboom.wukong.user.service
+  cloud:
+    subscribed-services: wukong-user-service

@@ -1,8 +1,8 @@
 package org.okboom.wukong.dubbo.configuration;
 
 import org.okboom.wukong.dubbo.proxy.DubboProxyService;
-import org.okboom.wukong.dubbo.proxy.ReferenceCache;
-import org.okboom.wukong.dubbo.proxy.ReferenceMemoryCache;
+import org.okboom.wukong.dubbo.cache.ReferenceCache;
+import org.okboom.wukong.dubbo.cache.ReferenceMemoryCache;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,4 +1,4 @@
-package org.okboom.wukong.dubbo.proxy;
+package org.okboom.wukong.dubbo.cache;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.google.common.cache.CacheBuilder;

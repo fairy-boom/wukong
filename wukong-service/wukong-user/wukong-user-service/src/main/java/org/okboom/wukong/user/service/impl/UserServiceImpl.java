@@ -9,6 +9,7 @@ import org.okboom.wukong.user.dto.UserInfoDTO;
 import org.okboom.wukong.user.dto.UserRegisterDTO;
 import org.okboom.wukong.user.manager.UserManager;
 import org.okboom.wukong.user.service.UserService;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.constraints.NotNull;
 
@@ -17,7 +18,8 @@ import javax.validation.constraints.NotNull;
  */
 @Slf4j
 @AllArgsConstructor
-@Service(validation = "true", version = "${dubbo.provider.UserService.version}", timeout = 1000)
+@RestController
+@Service(validation = "true", version = "${dubbo.provider.UserService.version}", timeout = 1000, parameters = {"metadata", "remote"})
 public class UserServiceImpl implements UserService {
 
     private final UserManager userManager;

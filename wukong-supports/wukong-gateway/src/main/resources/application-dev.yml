@@ -1,6 +1,6 @@
 dubbo:
   register:
-    address: nacos://localhost:8848
+    address: spring-cloud://localhost
   protocol:
     port: -1
     name: dubbo

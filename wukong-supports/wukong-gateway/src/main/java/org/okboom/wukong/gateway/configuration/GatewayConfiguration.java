@@ -4,7 +4,7 @@ import com.alibaba.cloud.nacos.NacosConfigManager;
 import com.alibaba.cloud.nacos.NacosConfigProperties;
 import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
 import org.okboom.wukong.dubbo.proxy.DubboProxyService;
-import org.okboom.wukong.dubbo.proxy.ReferenceCache;
+import org.okboom.wukong.dubbo.cache.ReferenceCache;
 import org.okboom.wukong.gateway.filter.AuthFilter;
 import org.okboom.wukong.gateway.filter.InvokeFilter;
 import org.okboom.wukong.gateway.filter.RequestFilter;

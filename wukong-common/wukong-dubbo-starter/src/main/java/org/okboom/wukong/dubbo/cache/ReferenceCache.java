@@ -1,4 +1,4 @@
-package org.okboom.wukong.dubbo.proxy;
+package org.okboom.wukong.dubbo.cache;
 
 
 import org.apache.dubbo.config.ReferenceConfig;

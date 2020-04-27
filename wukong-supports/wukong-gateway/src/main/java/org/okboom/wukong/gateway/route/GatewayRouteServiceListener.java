@@ -9,7 +9,7 @@ import com.alibaba.nacos.api.config.listener.Listener;
 import lombok.extern.slf4j.Slf4j;
 import org.okboom.wukong.common.tool.util.JSONUtil;
 import org.okboom.wukong.dubbo.domain.Metadata;
-import org.okboom.wukong.dubbo.proxy.ReferenceCache;
+import org.okboom.wukong.dubbo.cache.ReferenceCache;
 import org.okboom.wukong.gateway.constant.NacosConstant;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.core.env.ConfigurableEnvironment;
@@ -90,12 +90,12 @@ public class GatewayRouteServiceListener {
         List<RouteDefinition> routeDefinitions = JSONUtil.parseList(configInfo, RouteDefinition.class);
         gatewayRouteService.updateList(routeDefinitions);
 
-        List<Metadata> metadata = new ArrayList<>();
-        routeDefinitions.forEach(t -> {
-            Metadata data = new Metadata();
-            BeanUtil.fillBeanWithMap(t.getMetadata(), data, false);
-            metadata.add(data);
-        });
-        referenceCache.refresh(metadata);
+//        List<Metadata> metadata = new ArrayList<>();
+//        routeDefinitions.forEach(t -> {
+//            Metadata data = new Metadata();
+//            BeanUtil.fillBeanWithMap(t.getMetadata(), data, false);
+//            metadata.add(data);
+//        });
+//        referenceCache.refresh(metadata);
     }
 }

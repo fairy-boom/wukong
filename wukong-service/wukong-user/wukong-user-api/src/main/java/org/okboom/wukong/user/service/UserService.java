@@ -1,5 +1,6 @@
 package org.okboom.wukong.user.service;
 
+//import org.okboom.wukong.dubbo.annotation.Provider;
 import org.okboom.wukong.dubbo.result.ServiceResult;
 import org.okboom.wukong.user.dto.UserInfoDTO;
 import org.okboom.wukong.user.dto.UserRegisterDTO;
@@ -16,6 +17,7 @@ public interface UserService {
      * @param account 账号
      * @return
      */
+//    @Provider(path = "/exists")
     ServiceResult exists(@NotNull String account);
 
     /**

@@ -6,6 +6,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.apache.dubbo.config.ReferenceConfig;
 import org.apache.dubbo.rpc.service.GenericException;
 import org.apache.dubbo.rpc.service.GenericService;
+import org.okboom.wukong.dubbo.cache.ReferenceCache;
 import org.okboom.wukong.dubbo.domain.Metadata;
 
 import java.util.concurrent.CompletableFuture;

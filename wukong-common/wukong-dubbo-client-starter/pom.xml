@@ -3,32 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>wukong-user</artifactId>
+        <artifactId>wukong-common</artifactId>
         <groupId>org.okboom</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>wukong-user-service</artifactId>
+    <artifactId>wukong-dubbo-client-starter</artifactId>
     <packaging>jar</packaging>
-    <description>用户服务</description>
 
     <dependencies>
         <dependency>
             <groupId>org.okboom</groupId>
-            <artifactId>wukong-boot-starter</artifactId>
+            <artifactId>wukong-dubbo-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.okboom</groupId>
-            <artifactId>wukong-user-api</artifactId>
+            <artifactId>wukong-common-tool</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-dubbo</artifactId>
-        </dependency>
-
     </dependencies>
-
 </project>

@@ -1,7 +1,7 @@
 package org.okboom.wukong.gateway.route;
 
 import lombok.extern.slf4j.Slf4j;
-import org.okboom.wukong.dubbo.proxy.ReferenceCache;
+import org.okboom.wukong.dubbo.cache.ReferenceCache;
 import org.springframework.cloud.gateway.event.RefreshRoutesEvent;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinitionWriter;
