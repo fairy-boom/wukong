@@ -29,7 +29,7 @@
         <mybatis.plus.version>3.3.1</mybatis.plus.version>
         <mybatis.version>3.5.4</mybatis.version>
         <mybatis.spring.version>2.0.4</mybatis.spring.version>
-        <mysql.connector.version>8.0.19</mysql.connector.version>
+        <mysql.connector.version>8.0.28</mysql.connector.version>
         <druid.version>1.1.22</druid.version>
         <protostuff.version>1.7.2</protostuff.version>
         <redisson.version>3.12.5</redisson.version>
